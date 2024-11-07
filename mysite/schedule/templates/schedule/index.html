@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>수행평가 일정</title>
+</head>
+<body>
+    <h1>수행평가 일정</h1>
+    <p>이 페이지는 수행평가 일정을 보여주는 메인 페이지입니다.</p>
+    <a href="{% url 'add_schedule' %}">일정 추가하기</a>
+    <ul>
+        {% for item in schedules %}
+            <li>{{ item.date }} - {{ item.title }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
